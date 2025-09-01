@@ -131,10 +131,10 @@ const libro = {
         prestados: 2,
         ubicacion: "Estante b6"
     },
-    registro: { // en minúsculas para consistencia
+    registro: { 
         fechaPublicacion: "2011-06-20",
         fechaIngreso: "2011-07-15",
-        ultimaRevision: "2025-09-30" // corregido
+        ultimaRevision: "2025-09-30"
     }
 };
 
@@ -145,7 +145,7 @@ console.log(libro.informacion.autor);
 const ejemplaresDisponibles = libro.disponibilidad.copias - libro.disponibilidad.prestados;
 console.log(`Ejemplares disponibles: ${ejemplaresDisponibles}`);
 
-// Actualizar la ultimaRevision con la fecha actual (formato YYYY-MM-DD)
+// Actualizar la ultimaRevision con la fecha actual 
 const fechaActual = new Date().toISOString().split('T')[0];
 libro.registro.ultimaRevision = fechaActual;
 console.log(`Última revisión actualizada: ${libro.registro.ultimaRevision}`);
