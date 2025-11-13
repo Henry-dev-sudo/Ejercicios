@@ -152,11 +152,11 @@ console.log(`Tarifas de estacionamiento:
 function calcularCosto(horas) {
     let precio;
     
-    if (horas === 1) {
+    if (horas > 0 && horas <= 1) {  
         precio = 2.00;
-    } else if (horas >= 2 && horas <= 4) {
+    } else if (horas > 1 && horas <= 4) {  
         precio = 5.00;
-    } else if (horas > 4) {
+    } else if (horas > 4) { 
         precio = 10.00;
     } else {
         return 'Las horas son negativas o no válidas';
